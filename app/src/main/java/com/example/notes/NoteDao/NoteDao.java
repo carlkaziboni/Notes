@@ -29,4 +29,7 @@ public interface NoteDao {
 
     @Delete
     void delete(Note note);
+
+    @Query("UPDATE NotesTable SET text = :text WHERE id = :id")
+    void create(int id, String text);
 }
